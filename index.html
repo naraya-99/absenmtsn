@@ -68,10 +68,10 @@
       color: #000 !important;
     }
 
-    /* Print Setting: Full Landscape A4 / F4 dengan margin kiri & kanan tepat 1.3 cm */
+    /* Print Setting: Full Landscape A4 / F4 dengan margin atas 3 cm, margin kiri & kanan 1,3 cm */
     @page {
       size: landscape;
-      margin: 15mm 13mm 12mm 13mm; /* Kiri dan Kanan tepat 1,3 cm (13 mm) */
+      margin: 30mm 13mm 12mm 13mm; /* Margin atas (top) 3 cm (30 mm), kiri & kanan 1,3 cm (13 mm) */
     }
     @media print {
       body {
@@ -198,7 +198,7 @@
 
       <div class="flex items-center gap-2 text-xs text-gray-500 bg-amber-50 p-2.5 rounded-lg border border-amber-200">
         <i data-lucide="info" class="w-4 h-4 text-amber-600 flex-shrink-0"></i>
-        <span>Margin sisi kiri dan kanan 1,3 cm. Kotak persentase (%) dan rekapitulasi ketidakhadiran (S, I, C, DL, TB, TK) memiliki garis horizontal penuh per bagian nama pegawai.</span>
+        <span>Margin atas (top) diset 3 cm, sisi kiri dan kanan 1,3 cm. Kotak persentase (%) dan rekapitulasi kehadiran (S, I, C, DL, TB, TK) memiliki garis horizontal penuh per bagian nama pegawai.</span>
       </div>
     </div>
   </div>
@@ -1047,7 +1047,7 @@
       renderTable();
     }
 
-    // --- EXPORT TO EXCEL DENGAN EXCELJS (MARGIN KIRI/KANAN 1.3 CM, ROW HEIGHT 15, COL WIDTH 2.6) ---
+    // --- EXPORT TO EXCEL DENGAN EXCELJS (MARGIN ATAS 3 CM, KIRI/KANAN 1.3 CM, ROW HEIGHT 15, COL WIDTH 2.6) ---
     async function exportToExcel() {
       const kategori = document.getElementById('kategoriSelect').value;
       const bulanIdx = parseInt(document.getElementById('bulanSelect').value);
@@ -1086,8 +1086,8 @@
           margins: {
             left: 1.3 / 2.54,   // Margin kiri tepat 1,3 cm (~0.51 in)
             right: 1.3 / 2.54,  // Margin kanan tepat 1,3 cm (~0.51 in)
-            top: 15 / 2.54,     // Margin atas 15mm
-            bottom: 12 / 2.54,  // Margin bawah 12mm
+            top: 3.0 / 2.54,    // Margin atas (top) tepat 3 cm (~1.18 in)
+            bottom: 1.2 / 2.54, // Margin bawah 1,2 cm
             header: 0.5 / 2.54,
             footer: 0.5 / 2.54
           },
